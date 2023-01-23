@@ -27,7 +27,6 @@ export default function LogIn() {
                 Login
             )
             .then((response) => {
-                console.log(response)
                 setUserData(response.data)
                 navigate("/home")
                 setLoad("Entrar")

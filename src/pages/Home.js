@@ -27,7 +27,6 @@ export default function Home() {
         )
             .then(res => {
                 setList(res.data)
-                console.log(res.data)
             })
             .catch(err => alert(err.response.data.message))
     }, [update, token])
