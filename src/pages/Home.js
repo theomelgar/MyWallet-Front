@@ -50,12 +50,12 @@ export default function Home() {
             <RegisterStyle>
                 {list?.length < 1 && <h2>Não há registros de entrada ou saída</h2>}
                 {list.map((activity) => <Operation setUpdate={setUpdate} update={update} key={activity._id} activity={activity} token={token} />)}
-                {list?.length > 0 && (
+                
+            </RegisterStyle>
+            {list?.length > 0 && (
                     <Balance switchColor={total >= 0}>
                         <p>SALDO</p> <span>{total.toFixed(2).replace(".", ",")}</span>
                     </Balance>)}
-            </RegisterStyle>
-
             <OperationsStyle>
                 <IncomeStyle onClick={income}>
                     <ion-icon name="add-circle-outline"></ion-icon>
@@ -80,6 +80,7 @@ const HomeStyle = styled.div`
     font-weight: 700;
     color: white;
     gap: 20px;
+    position: relative;
 `
 
 const RegisterStyle = styled.div`
@@ -93,7 +94,7 @@ const RegisterStyle = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-bottom:40px;
+    padding-bottom: 10px;
     h2{
         color: gray;
         margin: auto;
@@ -103,11 +104,15 @@ const RegisterStyle = styled.div`
 
 const Balance = styled.div`
     position: absolute;
+    background-color: white;
     display: flex;
     justify-content: space-between;
-    width: 90%;
-    bottom: 10px;
-    left: auto;
+    width: 88.97%;
+    height: 20px;
+    bottom: 17.5%;
+    left:5%;
+    padding: 10px ;
+    border-radius:5px;
     p {
         font-size: 25px;
         line-height: 20px;

@@ -46,7 +46,7 @@ const StyleOperation = styled.div`
     justify-content: space-around;
     width: 100%;
     height: 25px;
-    margin: 10px;
+    margin: 15px;
     color: black;
     position: relative;
 `
