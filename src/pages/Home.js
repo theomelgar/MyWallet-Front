@@ -49,7 +49,7 @@ export default function Home() {
             </NavStyle>
             <RegisterStyle>
                 {list?.length < 1 && <h2>Não há registros de entrada ou saída</h2>}
-                {list.map((activity) => <Operation setUpdate={setUpdate} update={update} key={activity._id} activity={activity} token={token}/>)}
+                {list.map((activity) => <Operation setUpdate={setUpdate} update={update} key={activity._id} activity={activity} token={token} />)}
                 {list?.length > 0 && (
                     <Balance switchColor={total >= 0}>
                         <p>SALDO</p> <span>{total.toFixed(2).replace(".", ",")}</span>
@@ -93,7 +93,7 @@ const RegisterStyle = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    
+    padding-bottom:40px;
     h2{
         color: gray;
         margin: auto;
@@ -108,7 +108,6 @@ const Balance = styled.div`
     width: 90%;
     bottom: 10px;
     left: auto;
-    
     p {
         font-size: 25px;
         line-height: 20px;
