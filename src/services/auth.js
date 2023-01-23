@@ -1,4 +1,4 @@
 import axios from "axios";
 export const api = axios.create({
-  baseURL: "http://localhost:5000",
+  baseURL: "https://mywallet-api-gm38.onrender.com",
 });
